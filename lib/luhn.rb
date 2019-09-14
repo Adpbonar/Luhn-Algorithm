@@ -21,11 +21,7 @@ module Luhn
       credit_card << digit - 9 if digit > 9
     end
     # Determine divisibility of sum by 10 
-    if credit_card.sum % 10 == 0
-      return true 
-    else 
-      return false
-    end
+    return true if credit_card.sum % 10 == 0 else return false
   end
 end
 
